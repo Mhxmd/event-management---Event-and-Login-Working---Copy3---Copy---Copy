@@ -1,0 +1,105 @@
+/* Custom CSS for the overall layout */
+
+/* Body and general layout */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Light gray background */
+  color: #343a40; /* Dark text color */
+}
+
+.container {
+  max-width: 960px; /* Limit container width */
+}
+
+/* Header and navigation */
+header {
+  background-color: #343a40; /* Dark background for header */
+}
+
+.navbar-brand {
+  font-size: 1.5rem; /* Larger font size for brand */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  padding: 0.5rem 1rem; /* Padding around nav links */
+  font-size: 1rem; /* Font size for nav links */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fff; /* Hover color for nav links */
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1); /* Transparent border color for toggler */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Main content */
+main {
+  padding-top: 20px; /* Padding on top of main content */
+}
+
+/* Bootstrap Carousel */
+#eventCarousel .carousel-item {
+  padding: 20px; /* Add padding to carousel items */
+}
+
+#eventCarousel .list-group-item {
+  background-color: #ffffff; /* White background for event items */
+  border: 1px solid #ced4da; /* Light border for event items */
+  border-radius: 5px; /* Rounded corners for event items */
+  padding: 10px; /* Padding inside event items */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #343a40; /* Dark background for carousel arrows */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto; /* Adjust width as needed */
+}
+
+.carousel-control-prev {
+  left: -30px; /* Position arrow to the left */
+}
+
+.carousel-control-next {
+  right: -30px; /* Position arrow to the right */
+}
+
+/* Footer */
+footer {
+  background-color: #343a40; /* Dark background for footer */
+  color: #fff; /* Light text color for footer */
+  padding: 20px 0; /* Padding inside footer */
+}
+
+/* Avatar style */
+.avatar {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes it round */
+  margin-right: 10px; /* Adjust spacing as needed */
+}
+
+/* Profile picture style */
+.profile-picture {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes it round */
+  margin-right: 10px; /* Adjust spacing as needed */
+}
+
+/* List group item for user profile */
+.list-group-item-profile {
+  background-color: #ffffff; /* White background for profile item */
+  border: 1px solid #ced4da; /* Light border for profile item */
+  border-radius: 5px; /* Rounded corners for profile item */
+  padding: 10px; /* Padding inside profile item */
+  margin-top: 10px; /* Margin top for profile item */
+}

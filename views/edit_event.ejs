@@ -1,0 +1,66 @@
+<!-- views/editEvent.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Event</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    /* Add your custom styles here */
+    .btn-edit {
+      background-color: #4CAF50; /* Green background */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn-edit:hover {
+      background-color: #45a049; /* Darker green on hover */
+    }
+  </style>
+</head>
+<body>
+  <% include('partials/header') %>
+  <main class="container mt-4">
+    <h1>Edit Event</h1>
+    <form action="/events/edit/<%= event.event_id %>" method="POST">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" class="form-control" value="<%= event.title %>" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" class="form-control" rows="3" required><%= event.description %></textarea>
+      </div>
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" class="form-control" value="<%= event.date.toISOString().substr(0, 10) %>" required>
+      </div>
+      <div class="form-group">
+        <label for="time">Time</label>
+        <input type="time" id="time" name="time" class="form-control" value="<%= event.time %>" required>
+      </div>
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" class="form-control" value="<%= event.location %>" required>
+      </div>
+      <div class="form-group">
+        <label for="category">Category</label>
+        <input type="text" id="category" name="category" class="form-control" value="<%= event.category %>" required>
+      </div>
+      <button type="submit" class="btn-edit">Update Event</button>
+    </form>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
